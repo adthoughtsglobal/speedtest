@@ -33,7 +33,7 @@ function getRandomPhrase() {
   
 	return randomWords.join(' ');
   }
-  
+
 neww()
 
 function neww() {
