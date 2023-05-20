@@ -23,20 +23,7 @@
 
 		<!-- Modal content -->
 		<div class="modal-content">
-			<span class="close">&times;</span>
-			<h2>Upload Image</h2>
-			<hr>
-			<label for="images" class="drop-container">
-				<span class="drop-title">Drop files here</span>
-				or
-				<input type="file" accept="image/*" id="file" ><br>
-			</label>
-			<br>
-			<input readonly id="proimg" placeholder="AUTO">
-			<h3>Status : <b id="stats">unknown</b></h3>
-			<input id="ident" readonly placeholder="ID appear here"> <br>
-			Paste this text on the reciver side
-			<br><button onclick="getid()" class="btn1">Get ID</button><button onclick="snd()" class="btn1">Send</button>
+			<h1 id="gg"></h1>
 		</div>
 
 	</div>
@@ -52,12 +39,12 @@
 	var span = document.getElementsByClassName("close")[0];
 
 	// When the user clicks the button, open the modal 
-	btn.onclick = function () {
+	function on() {
 		modal.style.display = "block";
 	}
 
 	// When the user clicks on <span> (x), close the modal
-	span.onclick = function () {
+	function off() {
 		modal.style.display = "none";
 	}
 
