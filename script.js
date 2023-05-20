@@ -1,36 +1,39 @@
 function getRandomPhrase() {
 	const phrases = [
-		'banana',
-		'coffee',
-		'guitar',
-		'butter',
-		'dragon',
-		'soccer',
-		'island',
-		'jazz',
-		'peanut',
-		'purple',
-		'magnet',
-		'rocket',
-		'summer',
-		'sunset',
-		'flower',
-		'singer',
-		'orange',
-		'bottle',
-		'turtle',
-		'hockey'
+	  'banana',
+	  'coffee',
+	  'guitar',
+	  'butter',
+	  'dragon',
+	  'soccer',
+	  'island',
+	  'jazz',
+	  'peanut',
+	  'purple',
+	  'magnet',
+	  'rocket',
+	  'summer',
+	  'sunset',
+	  'flower',
+	  'singer',
+	  'orange',
+	  'bottle',
+	  'turtle',
+	  'hockey'
 	];
-
-	// Calculate the common word length
-	const wordLength = phrases.reduce((total, phrase) => total + phrase.length, 0) / phrases.length;
-
-	// Filter phrases with similar length
-	const filteredPhrases = phrases.filter(phrase => phrase.length === Math.round(wordLength));
-
-	const randomIndex = Math.floor(Math.random() * filteredPhrases.length);
-	return filteredPhrases[randomIndex];
-}
+  
+	const randomWords = [];
+	while (randomWords.length < 5) {
+	  const randomIndex = Math.floor(Math.random() * phrases.length);
+	  const randomWord = phrases[randomIndex];
+	  if (!randomWords.includes(randomWord)) {
+		randomWords.push(randomWord);
+	  }
+	}
+  
+	return randomWords.join(' ');
+  }
+  
 neww()
 
 function neww() {
