@@ -24,7 +24,7 @@ function getRandomPhrase() {
 	];
   
 	const randomWords = [];
-	while (randomWords.length < 1) {
+	while (randomWords.length < 5) {
 	  const randomIndex = Math.floor(Math.random() * phrases.length);
 	  const randomWord = phrases[randomIndex];
 	  if (!randomWords.includes(randomWord)) {
@@ -43,7 +43,7 @@ document.getElementById("quote").innerHTML = quote;
 function startTest() {
 var quote = getRandomPhrase();
 document.getElementById("quote").innerHTML = quote;
-  input.value = " ";
+  input.value = "";
   input.focus();
   startTime = new Date().getTime(); // Set 
 }
@@ -54,7 +54,7 @@ if (input.value == "") {
 }
   const typedText = input.value;
 
-  if (typedText == toLowerCase(document.getElementById("quote").innerHTML)) {
+  if (typedText == " " + toLowerCase(document.getElementById("quote").innerHTML)) {
     const elapsedTime = new Date().getTime() - startTime;
     const seconds = (elapsedTime / 1000).toFixed(2);
     const wordsPerMinute = calculateWordsPerMinute(typedText, seconds);
