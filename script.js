@@ -54,7 +54,7 @@ if (input.value == "") {
 }
   const typedText = input.value;
 
-  if (typedText == " " + toLowerCase(document.getElementById("quote").innerHTML)) {
+  if (typedText == " " + document.getElementById("quote").innerHTML.toLowerCase())) {
     const elapsedTime = new Date().getTime() - startTime;
     const seconds = (elapsedTime / 1000).toFixed(2);
     const wordsPerMinute = calculateWordsPerMinute(typedText, seconds);
