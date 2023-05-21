@@ -8,29 +8,35 @@ html {
 body {
 	font-family: 'Wix Madefor Display', sans-serif;
 	text-align: center;
-	padding-top: 50px;
-	padding: 20px;
+  background-color: black;
+  padding: 20px;
+  color: #fff;
 }
 
-.inputt {
-	width: 80vw;
-	padding: 10px 15px;
-	border-radius: 10px;
-	border: 1px solid grey;
-	font-size: 4vw;
-	font-family: 'Wix Madefor Display', sans-serif;
-	text-align: left;
-	margin-top: 3px;
+
+input {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 13px;
+  width: 70vw;
+  border: 1px solid purple;
 }
 
-.inputt:focus {
-	outline: none;
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
 }
 
-@media only screen and (max-width: 400px) {
-	body {
-		padding: 2px;
-	}
+#result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 400) {
+  input {
+    width: 90vw;
+  }
 }
 
 /* The Modal (background) */
@@ -49,14 +55,14 @@ body {
   
   /* Modal Content */
   .modal-content {
-	background-color: #fefefe;
-	  padding-bottom: 100px;
-	padding: 20px;
-	width: 80%;
-	
-	border: 1px solid #888;
-	  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-	  height: 50%; /* Full height */
+	background-color: black;
+  padding: 20px;
+	width: 80vw;
+	margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+	border: 1px solid purple;
+	  box-shadow: pink 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
   
   /* The Close Button */
@@ -73,3 +79,28 @@ body {
 	text-decoration: none;
 	cursor: pointer;
   }
+  
+  .btn1 {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid pink;
+    transition: 0.2s;
+    color: white;
+    animation: rotateShadow 5s infinite linear;
+  }
+  
+  .btn1:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes rotateShadow {
+      0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 10px blue, 0 0 20px purple;
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+    }
